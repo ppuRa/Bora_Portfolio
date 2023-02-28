@@ -1,0 +1,241 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {margin: 0; padding: 0;}
+a { color: inherit; text-decoration: none;}
+img { display: block; }
+body { color: #111; font-family: "Fira sans", sans-serif;}
+li { list-style: none;}
+html { scroll-behavior:smooth;}
+
+
+/* menu */
+header div.inner div.menu {display: block; overflow: hidden; width: 150px; background-color: #353866;
+color: #fff;transition: all 0.5s ease;border-radius: 20px; padding: 10px;
+box-sizing: border-box;position: fixed;top: 50%; z-index: 5; right: 20px; 
+transform: translate(0,-50%);}
+header div.inner div.menu ul {list-style: none;margin: 0;padding: 0;}
+header div.inner div.menu a, .menu > label {display: block;height: 20px;padding: 8px;cursor: pointer;
+color: #fff;text-decoration: none;}
+header div.inner div.menu a:hover {color: #353866;}
+header div.inner div.menu ul li:hover, .menu > label:hover {background-color: #fff;color: #000;border-radius: 10px;}
+header div.inner div.menu div {position: absolute;left: 50px;line-height: 1.5;font-size: 1em;
+font-family: 'Fira sans';padding: 0 0 0 20px;}
+
+#expand-menu {display: none;}
+#expand-menu:checked ~ ul {display: block;height: auto;}
+
+header div.inner div.menu li:nth-child(1) a::before{ content: '\ef4c'; }
+header div.inner div.menu label::before{ content: '\e5d2'; }
+header div.inner div.menu ::before {font-family: 'Material Icons';font-size: 1.5em;float: left;clear: left;}
+header div.inner div.menu li:nth-child(2) a::before{ content: '\f02e'; }
+header div.inner div.menu li:nth-child(3) a::before{ content: '\e913'; }
+header div.inner div.menu li:nth-child(4) a::before{ content: '\e051'; }
+header div.inner div.menu li:nth-child(5) a::before{ content: '\e8e9'; }
+header div.inner div.menu li:nth-child(6) a::before{ content: '\e8b8'; }
+
+@media screen and (max-width:1023px) {
+  header div.inner div.menu {
+    width: 60px;
+  }
+}
+@media screen and (max-width:560px) {
+  header div.inner div.menu #expand-menu:not(:checked) ~ ul {
+      display: none;
+  }
+}
+
+
+
+/* header section inner -background */
+
+header { width: 100%; height: 100vh; position: relative; background-color: #f8faff;}
+
+section {  width: 100%; height: 100vh; position: relative; background-color: #f8faff;}
+
+div.inner { width: 1200px; height: 100vh; margin: 0 auto; position: relative; }
+div.inner div.centerBox { width: 100%; height: 75vh; background: #f8faff; box-shadow: 0 0 10px rgba(176, 184, 184, 0.2);  position: absolute; top: 50%; transform: translate(0 ,-50%); }
+
+
+
+/* header */
+
+/* header { width: 100%; height: 100vh; position: relative; background-color: #eec4c4;} */
+header div.inner div.centerBox div.mainBox { width: 500px; height: 300px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+header div.inner div.centerBox div.mainBox h1 { font-family: 'Fira Sans'; 
+font-weight: 700;font-size: 90px;line-height: 100px; text-align: right; color: #311e3e;}
+header div.inner div.centerBox div.mainBox h2 {font-family: 'Fira Sans';font-weight: 700; font-size: 30px; line-height: 40px;text-align: right; margin-top: 30px; } 
+
+
+
+/* About */
+
+/* section {  width: 100%; height: 100vh; position: relative; background-color: #eec4c4;} */
+section div.inner div.centerBox h2 {
+position: absolute; margin-left: 80px; left:0 ; top: 50px; font-weight: 700; font-size: 32px;}
+section div.inner div.centerBox div.inBox {width: 640px;height: 380px;top: 50%;  left: 50%; transform: translate(-50%, -50%); background: #ffeef8;
+opacity: 0.9; border: 5px solid #f5ebf1; position: absolute;}
+section div.inner div.centerBox div.inBox div.outBox {width: 150px; height: 35px; background: #f82a64; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); position: absolute; right: -60px; top: -25px; transform: rotate(-20deg);}
+
+section div.inner div.centerBox div.inBox div.textBox01 {width: 100%; margin-top: 30px; margin-left: 10px;}
+section div.inner div.centerBox div.inBox div.textBox01 h2 {font-weight: 700;
+font-size: 25px; margin-left: 5px;}
+section div.inner div.centerBox div.inBox div.textBox01 img { display: block; margin-left: 15px; width: 128px; height: 5px; margin-top: 50px;}
+section div.inner div.centerBox div.inBox div.textBox01 h3 {font-weight: 400;
+font-size: 25px; margin-left: 15px;}
+section div.inner div.centerBox div.inBox div.textBox01 h3 span {font-weight: 600; font-size: 30px; }
+
+section div.inner div.centerBox div.inBox div.textBox02 {margin-top: 30px; margin-left: 15px;}
+section div.inner div.centerBox div.inBox div.textBox02 span { border-radius: 50%; width: 8px; height: 8px; background: #8b1639; display: block; position: absolute; margin-left: 5px; }
+section div.inner div.centerBox div.inBox div.textBox02 h3 { margin-left: 15px;font-weight: 600; font-size: 20px;}
+section div.inner div.centerBox div.inBox div.textBox02 ul {margin-top: 5px;}
+section div.inner div.centerBox div.inBox div.textBox02 ul li{ margin-left: 35px; font-size: 12px;  line-height: 1.8; }
+
+section div.inner div.centerBox div.inBox div.textBox03 {margin-top: 30px; margin-left: 15px;}
+section div.inner div.centerBox div.inBox div.textBox03 span { border-radius: 50%; width: 8px; height: 8px; background: #8b1639; display: block; position: absolute; margin-left: 5px; }
+section div.inner div.centerBox div.inBox div.textBox03 h3 { margin-left: 15px;font-weight: 600; font-size: 20px;}
+section div.inner div.centerBox div.inBox div.textBox03 ul {margin-top: 5px;}
+section div.inner div.centerBox div.inBox div.textBox03 ul li{ margin-left: 35px; font-size: 12px; line-height: 1.8; }
+
+
+
+
+
+/* Skills */
+section#skill div.inner div.centerBox h2 {  position: absolute; margin-left: 80px; left:0 ; top: 50px; font-weight: 700; font-size: 32px; }
+section#skill div.inner div.centerBox div.skillBox { position: absolute; right: 30%; top: 15%; }
+
+/* section.skill div.inner div.centerBox div.skillBox span{ width: 90px; height: 1px; background-color: #111; display: block;} */
+
+section#skill div.inner div.centerBox div.skillBox div.skillBox1 h3 { font-weight: 600; font-size: 18px; }
+section#skill div.inner div.centerBox div.skillBox div.skillBox1 div span.skillBox01_line {width: 250px; height: 2px; background-color: #111; }
+section#skill div.inner div.centerBox div.skillBox div.skillBox1 div span {font-size: 12px; display: inline-block; vertical-align: middle; margin-top: -20px; margin-left: 5px;}
+section#skill div.inner div.centerBox div.skillBox div.skillBox1 ul.dash {
+margin-top: -10px; list-style: none; margin-left: 0; padding-left: 1em; }
+section#skill div.inner div.centerBox div.skillBox div.skillBox1 ul.dash li {
+margin-left: 10px; font-size: 12px; line-height: 1.5; }
+section#skill div.inner div.centerBox div.skillBox div.skillBox1 ul.dash li::before{
+display: inline-block; content: "-"; width: 1em; margin-left: -1em;}
+
+section#skill div.inner div.centerBox div.skillBox div.skillBox2 h3 { font-weight: 600; font-size: 18px; margin-top: 5px; }
+section#skill div.inner div.centerBox div.skillBox div.skillBox2 div span.skillBox02_line {width: 140px; height: 2px; background-color: #111; }
+section#skill div.inner div.centerBox div.skillBox div.skillBox2  div span {font-size: 12px; display: inline-block; vertical-align: middle;margin-top: -20px; margin-left: 5px; }
+
+section#skill div.inner div.centerBox div.skillBox div.skillBox3 h3 { font-weight: 600; font-size: 18px; margin-top: 5px; }
+section#skill div.inner div.centerBox div.skillBox div.skillBox3 div span.skillBox03_line {width: 140px; height: 2px; background-color: #111; }
+section#skill div.inner div.centerBox div.skillBox div.skillBox3  div span {font-size: 12px; display: inline-block; vertical-align: middle;margin-top: -20px;margin-left: 5px; }
+
+section#skill div.inner div.centerBox div.skillBox div.skillBox4 h3 { font-weight: 600; font-size: 18px; margin-top: 5px; }
+section#skill div.inner div.centerBox div.skillBox div.skillBox4 div span.skillBox04_line {width: 120px; height: 2px; background-color: #111; }
+section#skill div.inner div.centerBox div.skillBox div.skillBox4  div span {font-size: 12px; display: inline-block; vertical-align: middle;margin-top: -20px;margin-left: 5px; }
+
+section#skill div.inner div.centerBox div.skillBox div.skillBox5 h3 { font-weight: 600; font-size: 18px; margin-top: 5px; }
+section#skill div.inner div.centerBox div.skillBox div.skillBox5 div span.skillBox05_line {width: 120px; height: 2px; background-color: #111; }
+section#skill div.inner div.centerBox div.skillBox div.skillBox5 div span {font-size: 12px; display: inline-block; vertical-align: middle;margin-top: -20px; margin-left: 5px;}
+
+section#skill div.inner div.centerBox div.skillBox div.skillBox6 h3 { font-weight: 600; font-size: 18px; margin-top: 5px;}
+section#skill div.inner div.centerBox div.skillBox div.skillBox6 div span.skillBox06_line {width: 300px; height: 2px; background-color: #111; }
+section#skill div.inner div.centerBox div.skillBox div.skillBox6 div span {font-size: 12px; display: inline-block; vertical-align: middle; margin-top: -20px; margin-left: 5px; margin-left: 5px;}
+section#skill div.inner div.centerBox div.skillBox div.skillBox6 ul.dash {
+margin-top: -10px; list-style: none; margin-left: 0; padding-left: 1em; }
+section.skill div.inner div.centerBox div.skillBox div.skillBox6 ul.dash li {
+margin-left: 10px; font-size: 12px; line-height: 1.3; }
+section#skill div.inner div.centerBox div.skillBox div.skillBox6 ul.dash li::before{
+display: inline-block; content: "-"; width: 1em; margin-left: -1em;}
+
+
+
+/* portfolio */
+
+section#portfolio div.inner div.centerBox h2 {
+position: absolute; margin-left: 80px; left:0 ; top: 50px; font-weight: 700; font-size: 32px; }
+section#portfolio div.inner div.centerBox div.portfolioBox{ width:900px; height: 400px; position: absolute; top: 170px; left:50%; transform: translate(-50%,0); 
+justify-content: space-between;  position: absolute; display: flex; }
+
+/* web_contents_01 */
+section#portfolio div.inner div.centerBox div.portfolioBox div.web_contents_01 { width: 250px; height: 100%; margin-left: 15px; margin-right: 10px; margin-top: 2px; }
+section#portfolio div.inner div.centerBox div.portfolioBox div.web_contents_01 span.web_contents_line {width: 250px; height: 2px; background-color: #111; display: block;}
+section#portfolio div.inner div.centerBox div.portfolioBox div.web_contents_01 h3{
+font-weight: 600; font-size: 25px;  }
+section#portfolio div.inner div.centerBox div.portfolioBox div.web_contents_01 div.checkbox img { display: inline; width: 20px; height: 20px; margin-left: 230px; }
+section#portfolio div.inner div.centerBox div.portfolioBox div.web_contents_01 p { display: block; font-size: 12px; margin-bottom: 10px; }
+section#portfolio div.inner div.centerBox div.portfolioBox div.web_contents_01 div.web_image01 img { display: block; width: 240px; height: 200px; margin-top: 20px;}
+
+/* web_contents_02 */
+section#portfolio div.inner div.centerBox div.portfolioBox div.web_contents_02 { width: 250px; height: 100%;  margin-right: 10px; margin-top: 2px; }
+section#portfolio div.inner div.centerBox div.portfolioBox div.web_contents_02 span.web_contents_line {
+width: 250px; height: 2px; background-color: #111; display: block;}
+section#portfolio div.inner div.centerBox div.portfolioBox div.web_contents_02 h3{
+font-weight: 600; font-size: 25px;  }
+section#portfolio div.inner div.centerBox div.portfolioBox div.web_contents_02 div.checkbox img { display: inline; width: 20px; height: 20px; margin-left: 230px; }
+section#portfolio div.inner div.centerBox div.portfolioBox div.web_contents_02 p { display: block; font-size: 12px; margin-bottom: 10px; }
+section#portfolio div.inner div.centerBox div.portfolioBox div.web_contents_02 div.web_image02 img { display: block; width: 240px; height: 200px; margin-top: 20px;}
+
+/* web_contents_03 */
+section#portfolio div.inner div.centerBox div.portfolioBox div.web_contents_03 { width: 250px; height: 100%; margin-left: 5px; margin-top: 2px; }
+section#portfolio div.inner div.centerBox div.portfolioBox div.web_contents_03 span.web_contents_line {
+width: 250px; height: 2px; background-color: #111; display: block;}
+section#portfolio div.inner div.centerBox div.portfolioBox div.web_contents_03 h3{
+font-weight: 600; font-size: 25px;  }
+section#portfolio div.inner div.centerBox div.portfolioBox div.web_contents_03 div.checkbox img { display: inline; width: 20px; height: 20px; margin-left: 230px; }
+section#portfolio div.inner div.centerBox div.portfolioBox div.web_contents_03 p { display: block; font-size: 12px; margin-bottom: 10px; }
+section#portfolio div.inner div.centerBox div.portfolioBox div.web_contents_03 div.web_image03 img { display: block; width: 240px; height: 200px; margin-top: 20px;}
+
+
+
+
+/* Banner */
+
+section#banner div.inner div.centerBox h2 { position: absolute; margin-left: 80px; left:0 ; top: 50px; font-weight: 700; font-size: 32px;; }
+
+section#banner div.inner div.centerBox { width: 100%; height: 75vh; background: #f8faff; box-shadow: 0 0 10px rgba(176, 184, 184, 0.2); }
+
+section#banner div.inner div.centerBox div.swiper { width: 100%; height: 400px; 
+position: absolute; top: 50%; transform: translate(0, -50%); z-index: 10;    margin: 0; padding: 0;}
+section#banner div.inner div.centerBox div.swiper div.swiper-slide{
+  text-align: center; font-size: 18px; display: flex; justify-content: center; align-items: center;
+}
+section#banner div.inner div.centerBox div.swiper div.swiper-slide{  background-color: #f8faff; width: 60%;}
+/* section#banner div.inner div.centerBox div.swiper div.swiper-slide:nth-child(2n) {width: 40%;}
+section#banner div.inner div.centerBox div.swiper div.swiper-slide:nth-child(2n) {width: 20%;} */
+section#banner div.inner div.centerBox div.swiper div.swiper-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+section#banner div.inner div.centerBox div.swiper div.swiper-slide img.bannerimg {
+  width: 100%; height: auto;
+}
+section#banner div.inner div.centerBox div.swiper div.swiper-slide img.bannerimg08 {
+  width: 1200px; height: 400px;
+}
+
+
+
+
+/* outro */
+
+section#outro div.inner div.centerBox { width: 1200px; height: 400px; }
+/* section#outro div.inner div.centerBox div.imageBox {width: 200px; height: 200px; position: absolute;} */
+section#outro div.inner div.centerBox img {width: 195px; height: 260px; display: inline-block; margin-left: 197.5px; margin-top: 70px;}
+
+section#outro div.inner div.centerBox div.inBox { width: 610px; height: 250px; margin-left: 102px; }
+section#outro div.inner div.centerBox div.inBox h3 { width: 100%; font-size: 20px; margin-top: 40px; text-align : center;}
+section#outro div.inner div.centerBox div.inBox h3 span { font-weight: 700;font-size: 28px; margin-top: 60px; color: #075007; }
+section#outro div.inner div.centerBox div.inBox p { font-weight: 700; font-size: 25px; margin-top: 30px; text-align : center;}
+
+
+/* footer */
+div.footer { width: 100%; height: 100px; background-color: #5a2745;}
+div.footer div.footerBox { width: 1200px; height: 100px; position: relative; margin: 0 auto;}
+
+div.ft_left { position: absolute; top:50%; left: 0; transform: translateY(-50%);}
+div.ft_left p {font-size: 14px; color:#d9d9d9; margin-bottom: 10px;}
+div.ft_left p:last-child {margin-bottom: 0;}
+
+div.ft_copy { position: absolute; bottom:20px; right:0;
+display: flex; align-items: center; justify-content: space-between;}
+div.ft_copy p {font-size: 14px; color: #979494;}
+div.ft_copy img {display: block; width: 36px; height: 28px; margin-left: 10px;
+}
+
+
+
+
+
